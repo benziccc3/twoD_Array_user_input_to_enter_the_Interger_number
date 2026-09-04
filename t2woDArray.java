@@ -5,6 +5,7 @@ import java.util.Scanner;
             Scanner s = new Scanner(System.in);
 
                 int row,colum;
+                int answer = 0;
 
             System.out.println("\n\n ====================  ---  Benzic ---  ====================\n\n ");
 
@@ -14,6 +15,7 @@ import java.util.Scanner;
             System.out.print("Enter the colum number you want: ");
             colum = s.nextInt();
 
+            System.out.println("");
 
                 int[][] twoDArray = new int[row][colum];
                 
@@ -22,13 +24,16 @@ import java.util.Scanner;
                 for (int i = 0 ; i < twoDArray.length ; i++){
                     for(int j = 0 ; j < twoDArray[i].length ;j++ ){
 
-                        System.out.printf("my Nummber[%d][%d]: ",i,j);
+                        System.out.printf("my Nummber[%d][%d]: ",(i+1),(j+1));
                         twoDArray[i][j] = s.nextInt(); 
 
-
+                        answer += twoDArray[i][j];
                     }
                 }
 
+                System.out.println("\nThe answer is: "+ answer);
+                System.out.println("\n\n  ========== Thank you ==========");
+                System.out.println("========== -- BenZic -- ===========\n\n\n");
 
         }
     }
